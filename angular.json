@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-angular": {
+    "cmp-databinding-start": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-angular",
+            "outputPath": "dist/cmp-databinding-start",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -35,6 +35,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -67,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "test-angular:build:production"
+              "buildTarget": "cmp-databinding-start:build:production"
             },
             "development": {
-              "buildTarget": "test-angular:build:development"
+              "buildTarget": "cmp-databinding-start:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "test-angular:build"
+            "buildTarget": "cmp-databinding-start:build"
           }
         },
         "test": {
